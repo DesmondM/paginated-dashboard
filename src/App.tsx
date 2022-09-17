@@ -12,6 +12,8 @@ import "./App.css";
 
 function App() {
   const [surveyData, setSurveyData] = useState([]);
+  const [startAt, setStartAt] = useState(0);
+  const [endAt, setEndAt] = useState(10);
 
   useEffect(() => {
     feedBack();
@@ -22,6 +24,19 @@ function App() {
     const outData = await response.json();
     console.log(outData);
     setSurveyData(outData);
+  };
+
+  const forwardCount = () => {
+    if (surveyData.length > endAt) {
+      setStartAt(startAt + 10);
+      setEndAt(endAt + 10);
+    }
+  };
+  const backCount = () => {
+    if (startAt >= 10) {
+      setStartAt(startAt - 10);
+      setEndAt(endAt - 10);
+    }
   };
 
   return (
@@ -54,27 +69,29 @@ function App() {
                   <th style={{ width: "120px" }}>Close Date</th>
                   <th style={{ width: "120px" }}>Status</th>
                 </tr>
-                {surveyData &&
-                  surveyData.map((survey) => {
-                    return (
-                      <tr key={survey.id}>
-                        <td>{survey.name}</td>
-                        <td>{survey.created_by}</td>
-                        <td>{survey.response}</td>
-
-                        <td>{survey.launch_date}</td>
-                        <td>{survey.close_date}</td>
-                        <td>
-                          {survey.status === "Live" ? (
-                            <p style={{ color: "green" }}>{survey.status}</p>
-                          ) : (
-                            <p style={{ color: "red" }}>{survey.status}</p>
-                          )}
-                        </td>
-                      </tr>
-                    );
-                  })}
+                {surveyData.slice(startAt, endAt).map((survey) => {
+                  return (
+                    <tr key={survey.id}>
+                      <td>{survey.name}</td>
+                      <td>{survey.created_by}</td>
+                      <td>{survey.response}</td>
+                      <td>{survey.launch_date}</td>
+                      <td>{survey.close_date}</td>
+                      <td>
+                        {survey.status === "Live" ? (
+                          <p style={{ color: "green" }}>{survey.status}</p>
+                        ) : (
+                          <p style={{ color: "red" }}>{survey.status}</p>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
                 {/* <div>{surveyData}</div> */}
+                <div>
+                  Rows per page 10 <span onClick={backCount}>{"< "}</span>
+                  <span onClick={forwardCount}>{" >"}</span>
+                </div>
               </table>
             </div>
           </div>
