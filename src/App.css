@@ -27,9 +27,7 @@
 .App-link {
   color: #61dafb;
 }
-.table td {
-  background: "";
-}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -41,4 +39,42 @@
 
 button {
   font-size: calc(10px + 2vmin);
+}
+#menu {
+  background: #f7f7f8;
+  width: 232px;
+  height: 100%;
+}
+
+#menu .logo {
+  display: flex;
+  align-items: center;
+  color: #495057;
+  padding: 30px 0 0 30px;
+}
+
+#menu .logo svg {
+  width: 40px;
+  margin-right: 5px;
+}
+
+#menu .items {
+  margin-top: 40px;
+}
+#menu .items li {
+  margin-top: 40px;
+  list-style: none;
+}
+#menu .items li svg {
+  color: rgb(234, 134, 49);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 10px 0 25px;
+}
+
+#interface {
+  width: calc(100%-232px);
 }
