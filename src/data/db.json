@@ -1,0 +1,103 @@
+{
+  "surveys": [
+    {
+      "id": 1,
+      "name": "Survey A",
+      "created_by": "John Smith",
+      "response": "1783/454/33",
+      "launch_date": "18/05/22 12:20",
+      "close_date": "18/05/22 12:20",
+      "status": "Live"
+    },
+    {
+      "id": 2,
+      "name": "Survey B",
+      "created_by": "Tebogo Tbo",
+      "response": "1434/454/33",
+      "launch_date": "15/05/22 12:20",
+      "close_date": "18/05/22 12:20",
+      "status": "Closed"
+    },
+    {
+      "id": 3,
+      "name": "Survey F",
+      "created_by": "Mary Moyo",
+      "response": "2002/454/33",
+      "launch_date": "09/08/22 14:20",
+      "close_date": "23/05/22 08:20",
+      "status": "Live"
+    },
+    {
+      "id": 4,
+      "name": "Survey H",
+      "created_by": "Kenneth Roy",
+      "response": "1783/454/33",
+      "launch_date": "22/05/22 12:20",
+      "close_date": "29/05/22 12:20",
+      "status": "Closed"
+    },
+    {
+      "id": 5,
+      "name": "Survey FF",
+      "created_by": "Lebo Thuso",
+      "response": "5345/454/33",
+      "launch_date": "07/05/22 12:20",
+      "close_date": "18/05/22 12:20",
+      "status": "Live"
+    },
+    {
+      "id": 6,
+      "name": "Survey D",
+      "created_by": "Craig Myer",
+      "response": "6788/454/33",
+      "launch_date": "11/05/22 12:20",
+      "close_date": "57/05/22 12:20",
+      "status": "Live"
+    },
+    {
+      "id": 7,
+      "name": "Survey Y",
+      "created_by": "Tos Manner",
+      "response": "899/454/33",
+      "launch_date": "01/05/22 12:20",
+      "close_date": "10/05/22 12:20",
+      "status": "Live"
+    },
+    {
+      "id": 8,
+      "name": "Survey QT",
+      "created_by": "Solomon Grey",
+      "response": "3566/454/33",
+      "launch_date": "12/08/22 12:20",
+      "close_date": "10/09/22 12:20",
+      "status": "Live"
+    },
+    {
+      "id": 9,
+      "name": "Survey QD",
+      "created_by": "Rory Tsambo",
+      "response": "5644/454/33",
+      "launch_date": "03/05/22 12:20",
+      "close_date": "18/05/22 12:20",
+      "status": "Live"
+    },
+    {
+      "id": 10,
+      "name": "Survey RT",
+      "created_by": "Poppy Ruto",
+      "response": "5645/454/33",
+      "launch_date": "06/05/22 16:20",
+      "close_date": "07/05/22 08:20",
+      "status": "Live"
+    },
+    {
+      "id": 11,
+      "name": "Survey WT",
+      "created_by": "Rasta Qawe",
+      "response": "45645/454/33",
+      "launch_date": "4/05/22 7:20",
+      "close_date": "12/05/22 11:20",
+      "status": "Live"
+    }
+  ]
+}
