@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   display: flex;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .App-logo {
@@ -60,20 +62,23 @@ button {
 }
 
 #menu .items {
-  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  color: #495057;
+  padding: 30px 0 0 30px;
 }
 #menu .items li {
   margin-top: 40px;
+  width: 40px;
   list-style: none;
+  position: fixed;
+  bottom: 25px;
 }
 #menu .items li svg {
-  color: rgb(234, 134, 49);
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 14px;
-  margin: 0 10px 0 25px;
+  width: 40px;
+  margin-right: 5px;
+  position: fixed;
+  bottom: 25px;
 }
 
 #interface {
@@ -81,20 +86,23 @@ button {
   width: 100%;
 }
 .board {
-  width: 80%;
+  width: 90%;
   display: flex;
   margin: 30px 0 30px 30px;
   overflow: auto;
   background: #fff;
   border-radius: 8px;
 }
-
 td {
-  font-family: "Roboto";
+  text-align: left;
+}
+tbody td {
+  /* font-family: "Roboto"; */
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  text-align: left;
 
   /* identical to box height, or 143% */
 
@@ -108,12 +116,14 @@ td {
 td:first-child,
 th:first-child {
   border-radius: 10px 0 0 10px;
+  padding: 15px;
 }
 
 // Set border-radius on the top-right and bottom-right of the last table data on the table row
 td:last-child,
 th:last-child {
   border-radius: 0 8x 8px 0;
+  padding: 15px;
 }
 
 tbody tr:nth-child(odd) {
@@ -121,8 +131,73 @@ tbody tr:nth-child(odd) {
   height: 50px;
 }
 
-.status {
-  background-color: #20c997;
+.live {
+  background-color: rgba(32, 201, 151, 0.3);
   color: "black";
-  border-radius: 10px;
+  border-radius: 30px;
+  width: 60%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+  padding: 10px 3px 10px 3px;
+}
+.closed {
+  background-color: rgba(240, 62, 63, 0.3);
+  color: "black";
+  border-radius: 30px;
+  width: 70%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+  padding: 10px 3px 10px 3px;
+}
+
+.heading {
+  /* font-family: "Roboto"; */
+  text-align: left;
+  margin: 50px 0 20px 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.16px;
+  color: #495057;
+}
+
+#interface .pagination {
+  font-style: normal;
+  text-align: right;
+  margin-right: 8%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  word-spacing: 4px;
+  letter-spacing: 0.16px;
+}
+
+div svg {
+  margin-top: 5px;
+}
+div svg:hover {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.at-foot {
+  width: 12%;
+  /* margin-right: 5px; */
+  position: fixed;
+  bottom: 60px;
+  display: flex;
+}
+
+.foot-col {
+  float: left;
+  width: 30%;
+  padding: 2px;
+  text-align: left;
 }
