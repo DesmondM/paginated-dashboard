@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
 const Surveys = () => {
+  const [rowsPerPage, setRowsPerPage] = useState(10);
   const [surveyData, setSurveyData] = useState([]);
   const [startAt, setStartAt] = useState(0);
-  const [endAt, setEndAt] = useState(10);
+  const [endAt, setEndAt] = useState(rowsPerPage);
   const [pageCount, setPageCount] = useState(1);
 
   useEffect(() => {
@@ -19,15 +20,15 @@ const Surveys = () => {
 
   const forwardCount = () => {
     if (surveyData.length > endAt) {
-      setStartAt(startAt + 10);
-      setEndAt(endAt + 10);
+      setStartAt(startAt + rowsPerPage);
+      setEndAt(endAt + rowsPerPage);
       setPageCount(pageCount + 1);
     }
   };
   const backCount = () => {
-    if (startAt >= 10) {
-      setStartAt(startAt - 10);
-      setEndAt(endAt - 10);
+    if (startAt >= rowsPerPage) {
+      setStartAt(startAt - rowsPerPage);
+      setEndAt(endAt - rowsPerPage);
       setPageCount(pageCount - 1);
     }
   };
@@ -126,7 +127,15 @@ const Surveys = () => {
         </div>
         <hr></hr>
         <div className="pagination">
-          Rows per page 10 | {pageCount} of {Math.ceil(surveyData.length / 10)}{" "}
+          Rows per page{" "}
+          <select id="dropdown" value={rowsPerPage} defaultValue={rowsPerPage}>
+            <option value={rowsPerPage}>{rowsPerPage}</option>
+            <option value="5">5</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+          </select>{" "}
+          | {pageCount} of {Math.ceil(surveyData.length / rowsPerPage)}{" "}
           <span onClick={backCount}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
