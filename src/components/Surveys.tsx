@@ -33,6 +33,8 @@ const Surveys = () => {
     }
   };
 
+  const changeRowCount = () => {};
+
   return (
     <div className="App">
       <section id="menu">
@@ -128,12 +130,16 @@ const Surveys = () => {
         <hr></hr>
         <div className="pagination">
           Rows per page{" "}
-          <select id="dropdown" value={rowsPerPage} defaultValue={rowsPerPage}>
+          <select
+            value={rowsPerPage}
+            onChange={(e) => setRowsPerPage(e.target.value)}
+          >
             <option value={rowsPerPage}>{rowsPerPage}</option>
-            <option value="5">5</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
+            <option>5</option>
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
           </select>{" "}
           | {pageCount} of {Math.ceil(surveyData.length / rowsPerPage)}{" "}
           <span onClick={backCount}>
