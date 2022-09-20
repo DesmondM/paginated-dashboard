@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Survey from "./Survey";
 
 const Surveys = () => {
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -9,7 +10,7 @@ const Surveys = () => {
 
   useEffect(() => {
     feedBack();
-  }, []);
+  }, [rowsPerPage, pageCount]);
 
   const feedBack = async () => {
     const response = await fetch("http://localhost:3500/surveys");
@@ -107,39 +108,24 @@ const Surveys = () => {
             </thead>
             <tbody>
               {surveyData.slice(startAt, endAt).map((survey) => {
-                return (
-                  <tr key={survey.id}>
-                    <td>{survey.name}</td>
-                    <td>{survey.created_by}</td>
-                    <td>{survey.response}</td>
-                    <td>{survey.launch_date}</td>
-                    <td>{survey.close_date}</td>
-                    <td>
-                      {survey.status === "Live" ? (
-                        <p className="live">{survey.status}</p>
-                      ) : (
-                        <p className="closed">{survey.status}</p>
-                      )}
-                    </td>
-                  </tr>
-                );
+                return <Survey survey={survey} />;
               })}
             </tbody>
           </table>
         </div>
-        <hr></hr>
+        <hr className="rule"></hr>
         <div className="pagination">
-          Rows per page{" "}
+          Rows Per Page{" "}
           <select
             value={rowsPerPage}
-            onChange={(e) => setRowsPerPage(e.target.value)}
+            onChange={(e) => setRowsPerPage(+e.target.value)}
           >
             <option value={rowsPerPage}>{rowsPerPage}</option>
-            <option>5</option>
-            <option>10</option>
-            <option>20</option>
-            <option>30</option>
-            <option>40</option>
+            <option>{5}</option>
+            <option>{10}</option>
+            <option>{20}</option>
+            <option>{30}</option>
+            <option>{40}</option>
           </select>{" "}
           | {pageCount} of {Math.ceil(surveyData.length / rowsPerPage)}{" "}
           <span onClick={backCount}>

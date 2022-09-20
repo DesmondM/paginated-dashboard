@@ -103,14 +103,12 @@ tbody td {
   font-size: 14px;
   line-height: 20px;
   text-align: left;
-
-  /* identical to box height, or 143% */
-
   letter-spacing: 0.16px;
-
-  /* Grey/Grey Base */
-
   color: #495057;
+}
+
+thead tr td {
+  font-weight: bold;
 }
 
 td:first-child,
@@ -119,11 +117,9 @@ th:first-child {
   padding: 15px;
 }
 
-// Set border-radius on the top-right and bottom-right of the last table data on the table row
 td:last-child,
 th:last-child {
-  border-radius: 0 8x 8px 0;
-  padding: 15px;
+  border-radius: 0 10x 10px 0;
 }
 
 tbody tr:nth-child(odd) {
@@ -208,7 +204,7 @@ div svg:hover {
 }
 
 hr {
-  width: "90%";
-  text-align: "left";
-  margin-left: "30px";
+  width: 90%;
+  text-align: left;
+  margin-left: 30px;
 }
