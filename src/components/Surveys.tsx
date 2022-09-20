@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import BackSvg from "../assets/BackSvg";
+import LogoSvg from "../assets/LogoSvg";
+import MSvg from "../assets/MSvg";
+import NextSvg from "../assets/NextSvg";
 import Survey from "./Survey";
 
 const Surveys = () => {
@@ -34,29 +38,11 @@ const Surveys = () => {
     }
   };
 
-  const changeRowCount = () => {};
-
   return (
     <div className="App">
       <section id="menu">
         <div className="logo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-menu-2"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#2c3e50"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <line x1="4" y1="6" x2="20" y2="6" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-            <line x1="4" y1="18" x2="20" y2="18" />
-          </svg>
+          <LogoSvg />
           <h4>Smartwage</h4>
         </div>
 
@@ -66,21 +52,7 @@ const Surveys = () => {
             style={{ marginLeft: "25px", padding: "3px" }}
           >
             {" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-letter-m"
-              width="40"
-              height="40"
-              viewBox="0 -4 14 24"
-              stroke-width="1.5"
-              stroke="#2c3e50"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M6 20v-16l6 14l6 -14v16" />
-            </svg>
+            <MSvg />
           </div>
           <div className="foot-col">
             <p>Mike Mekenekep</p>
@@ -129,39 +101,11 @@ const Surveys = () => {
           </select>{" "}
           | {pageCount} of {Math.ceil(surveyData.length / rowsPerPage)}{" "}
           <span onClick={backCount}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-caret-left"
-              width="22"
-              height="22"
-              viewBox="0 0 24 12"
-              stroke-width="1"
-              stroke="#2c3e50"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M18 15l-6 -6l-6 6h12" transform="rotate(270 12 12)" />
-            </svg>
+            <BackSvg />
           </span>
           <span onClick={forwardCount}>
             {" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-caret-right"
-              width="22"
-              height="22"
-              viewBox="0 0 24 12"
-              stroke-width="1"
-              stroke="#2c3e50"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M18 15l-6 -6l-6 6h12" transform="rotate(90 12 12)" />
-            </svg>
+            <NextSvg />
           </span>
         </div>
       </section>
