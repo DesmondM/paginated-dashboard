@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -47,6 +51,7 @@ button {
   background: #f7f7f8;
   width: 30%;
   height: 100vh;
+  float: right;
 }
 
 #menu .logo {
@@ -83,7 +88,9 @@ button {
 
 #interface {
   /* width: calc(100%-232px); */
+  /* width: 100%; */
   width: 100%;
+  float: right;
 }
 .board {
   width: 90%;
@@ -97,7 +104,6 @@ td {
   text-align: left;
 }
 tbody td {
-  /* font-family: "Roboto"; */
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -207,4 +213,13 @@ hr {
   width: 90%;
   text-align: left;
   margin-left: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+  /* #interface {
+    display: none;
+  } */
 }

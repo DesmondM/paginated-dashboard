@@ -2,7 +2,7 @@ import React from "react";
 
 const Survey = (props: {
   survey: {
-    id: React.Key | null | undefined;
+    id: React.Key;
     name: string;
     created_by: string;
     response: string;

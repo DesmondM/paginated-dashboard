@@ -6,7 +6,7 @@ import NextSvg from "../assets/NextSvg";
 import Survey from "./Survey";
 
 const Surveys = () => {
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [surveyData, setSurveyData] = useState([]);
   const [startAt, setStartAt] = useState(0);
   const [endAt, setEndAt] = useState(rowsPerPage);
@@ -14,7 +14,7 @@ const Surveys = () => {
 
   useEffect(() => {
     feedBack();
-  }, [rowsPerPage, pageCount]);
+  }, []);
 
   const feedBack = async () => {
     const response = await fetch("http://localhost:3500/surveys");
