@@ -39,7 +39,7 @@ const Surveys = () => {
   };
 
   return (
-    <div className="App">
+    <div className="container">
       <section id="menu">
         <div className="logo">
           <LogoSvg />
