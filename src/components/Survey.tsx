@@ -16,8 +16,14 @@ const Survey = (props: {
       <td>{props.survey.name}</td>
       <td>{props.survey.created_by}</td>
       <td>{props.survey.response}</td>
-      <td>{props.survey.launch_date}</td>
-      <td>{props.survey.close_date}</td>
+      <td>
+        <a>{props.survey.launch_date.slice(0, 5)}...</a>
+        <span>{props.survey.launch_date}</span>
+      </td>
+      <td>
+        <a>{props.survey.close_date.slice(0, 5)}...</a>
+        <span>{props.survey.close_date}</span>
+      </td>
       <td>
         {props.survey.status === "Live" ? (
           <p className="live">{props.survey.status}</p>

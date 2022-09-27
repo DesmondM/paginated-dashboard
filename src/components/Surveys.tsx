@@ -74,7 +74,7 @@ const Surveys = () => {
                 <td>Created By</td>
                 <td>Responses</td>
                 <td>Launch Date</td>
-                <td>Close Date</td>
+                <td>Closing Date</td>
                 <td>Status</td>
               </tr>
             </thead>
